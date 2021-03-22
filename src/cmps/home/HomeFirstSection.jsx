@@ -4,7 +4,7 @@ export function HomeFirstSection() {
   return (
     <section className="home-first-section">
 
-      <img className="section-img" src={require('../../assets/img/bg-pattern-home-3.svg')} alt="" />
+      {/* <img className="section-img" src={require('../../assets/img/bg-pattern-home-3.svg')} alt="" />
 
       <div className="container flex space-between">
 
@@ -40,7 +40,7 @@ export function HomeFirstSection() {
           </div>
         </div>
 
-      </div>
+      </div> */}
 
     </section>
   )

@@ -1,0 +1,9 @@
+.home-fourth-section {
+  height: 240px;
+  background-color: #111111;
+  opacity: 0.25;
+
+  @media (max-width: 550px) {
+    height: 328px;
+  }
+}

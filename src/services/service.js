@@ -1,60 +1,32 @@
 export const service = {
   query,
-  validateEmail
 }
 
 function query() {
-  return directors;
+  _addId();
+  return items;
 }
 
-function validateEmail(email) {
-  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(String(email).toLowerCase());
-}
-
-const directors = [{
-    _id: _makeId(),
-    img: require('../assets/img/avatar-nikita.jpg'),
-    name: 'Nikita Marks',
-    position: 'Founder & CEO',
-    about: '“Empowered teams create truly amazing products. Set the north star and let them follow it.”'
+const items = [{
+    title: 'Seared Salmon Fillet',
+    desc: 'Our locally sourced salmon served with a refreshing buckwheat summer salad.',
+    imgUrl: require('../assets/img/homepage/menu-items/menu-item1.jpg')
   },
   {
-    _id: _makeId(),
-    img: require('../assets/img/avatar-christian.jpg'),
-    name: 'Cristian Duncan',
-    position: 'Co-founder & COO',
-    about: '“Empowered teams create truly amazing products. Set the north star and let them follow it.”'
+    title: 'Rosemary Filet Mignon',
+    desc: 'Our prime beef served to your taste with a delicious choice of seasonal sides.',
+    imgUrl: require('../assets/img/homepage/menu-items/menu-item2.jpg')
   },
   {
-    _id: _makeId(),
-    img: require('../assets/img/avatar-cruz.jpg'),
-    name: 'Cruz Hamer',
-    position: 'Co-founder & CTO',
-    about: '“Empowered teams create truly amazing products. Set the north star and let them follow it.”'
-  },
-  {
-    _id: _makeId(),
-    img: require('../assets/img/avatar-drake.jpg'),
-    name: 'Drake Heaton',
-    position: 'Business Development Lead',
-    about: '“Empowered teams create truly amazing products. Set the north star and let them follow it.”'
-  },
-  {
-    _id: _makeId(),
-    img: require('../assets/img/avatar-griffin.jpg'),
-    name: 'Griffin Wise',
-    position: 'Lead Marketing',
-    about: '“Empowered teams create truly amazing products. Set the north star and let them follow it.”'
-  },
-  {
-    _id: _makeId(),
-    img: require('../assets/img/avatar-aden.jpg'),
-    name: 'Aden Allan',
-    position: 'Lead Design',
-    about: '“Empowered teams create truly amazing products. Set the north star and let them follow it.”'
-  },
+    title: 'Summer Fruit Chocolate Mousse',
+    desc: 'Creamy mousse combined with summer fruits and dark chocolate shavings.',
+    imgUrl: require('../assets/img/homepage/menu-items/menu-item3.jpg')
+  }
 ]
+
+function _addId() {
+  items.forEach(item => item.id = _makeId());
+}
 
 function _makeId(length = 5) {
   var txt = '';

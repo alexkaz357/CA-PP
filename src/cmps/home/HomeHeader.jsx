@@ -1,22 +1,39 @@
-import React from 'react'
+import React from "react";
 
 export function HomeHeader() {
   return (
     <section className="home-header">
-
-      <img className="header-img-1" src={require('../../assets/img/bg-pattern-home-1.svg')} alt="" />
+      <img
+        className="header-img-desktop"
+        src={require("../../assets/img/homepage/hero-bg-desktop.jpg")}
+        alt=""
+      />
+      <img
+        className="header-img-mobile"
+        src={require("../../assets/img/homepage/hero-bg-mobile.jpg")}
+        alt=""
+      />
 
       <div className="container">
+        <div className="content">
+          <img
+            className="logo"
+            src={require("../../assets/img/logo.svg")}
+            alt=""
+          />
 
-        <div className="header-text flex">
-          <p className="main-text">Find the <br /> best <span>talent</span></p>
-          <div className="secondary-container flex">
-            <div className="secondary-line"></div>
-            <p className="secondary-text">Finding the right people and building high performing teams can be hard. Most companies aren’t tapping into the abundance of global talent. We’re about to change that.</p>
+          <div className="texsts">
+            <p className="main">Exquisite dining since 1989</p>
+
+            <p className="secondary">
+              Experience our seasonal menu in beautiful country surroundings.
+              Eat the freshest produce from the comfort of our farmhouse.
+            </p>
+
+            <button className="book-btn">BOOK A TABLE</button>
           </div>
         </div>
-        <img className="header-img-2" src={require('../../assets/img/bg-pattern-home-2.svg')} alt="" />
       </div>
     </section>
-  )
+  );
 }
